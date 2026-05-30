@@ -1,0 +1,38 @@
+---
+title: "Build vs. Buy for LLM Features: A Founder's Decision Framework"
+excerpt: "Should you call an API, fine-tune, or self-host? A practical framework for early-stage teams that weighs cost, control, and time-to-trust — not just tokens."
+publishedAt: "2026-04-28"
+updatedAt: "2026-05-04"
+tags:
+  - "Build vs Buy"
+  - "LLM Ops"
+  - "Strategy"
+status: "published"
+author: "Anuj Jain"
+---
+
+"Should we build our own model?" is almost always the wrong first question.
+The right one is: *what's the cheapest path to something we can trust in
+production?*
+
+## The default should be "buy"
+
+For 90% of early-stage use cases, a hosted model behind a good retrieval and
+evaluation layer wins. You're not in the model business — you're in the
+solving-your-customer's-problem business.
+
+## When building (or fine-tuning) earns its keep
+
+Consider going deeper only when at least one is true:
+
+- **Latency or cost** at your scale makes API calls untenable.
+- **Privacy or compliance** forbids sending data to a third party.
+- **A proprietary data moat** would meaningfully outperform a general model.
+
+Notice none of these is "it would be cool."
+
+## The hidden cost is evaluation, not inference
+
+Whatever you choose, the expensive part is knowing whether it's *working*.
+Budget more for evals, guardrails, and monitoring than for the model itself.
+That's the part that determines whether you can sleep after you ship.

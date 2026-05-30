@@ -1,0 +1,41 @@
+---
+title: "Cutting Support Volume 68% with AI Triage"
+client: "Seed-stage B2B SaaS startup"
+summary: "Designed and shipped an AI triage layer that deflected repetitive tickets and routed the rest to the right human — freeing a 3-person support team."
+industry: "B2B SaaS"
+tags:
+  - "Support Automation"
+  - "RAG"
+  - "LLM Ops"
+outcomes:
+  - metric: "-68%"
+    label: "repetitive support tickets"
+  - metric: "4.6/5"
+    label: "CSAT after rollout"
+  - metric: "6 weeks"
+    label: "strategy to production"
+testimonial:
+  quote: "Anuj didn't just hand us a prototype — he shipped something our team trusts in production. Support is finally not a fire drill."
+  author: "Maria Lindqvist"
+  role: "Co-founder & COO"
+status: "published"
+order: 1
+date: "2026-03-18"
+---
+
+The team was drowning. Three support agents were fielding the same dozen
+questions every day while real escalations sat in the queue.
+
+## What we did
+
+- Audited 90 days of historical tickets to find the deflectable 70%.
+- Built a retrieval-augmented assistant grounded in their help center and
+  internal runbooks, with strict citation-or-defer behavior.
+- Added a confidence gate so low-certainty answers route to a human with full
+  context attached.
+
+## Why it worked
+
+We treated deflection as a routing problem, not a chatbot problem. The model
+only answers when it can cite a source — otherwise it hands off cleanly. That
+single constraint is what made the team trust it enough to ship.

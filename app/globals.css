@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+ * Tailwind v4 theme tokens. This project was scaffolded with Tailwind CSS v4,
+ * which configures the theme via the CSS-first `@theme` directive rather than a
+ * `tailwind.config.ts` file. The colors and font family below mirror the
+ * project's design tokens and generate the corresponding utility classes
+ * (e.g. bg-background, text-text-secondary, font-sans).
+ */
+@theme {
+  --color-background: #000000;
+  --color-surface: #171717;
+  --color-surface-2: #262626;
+  --color-border: #262626;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #9ca3af;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-cta: #3b82f6;
+  --color-cta-hover: #2563eb;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
 }

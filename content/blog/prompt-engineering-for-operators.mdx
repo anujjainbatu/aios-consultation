@@ -1,0 +1,41 @@
+---
+title: "Prompt Engineering for Operators (Not Researchers)"
+excerpt: "You don't need a PhD to get reliable output from an LLM. You need the operator's mindset: clear contracts, examples, and a way to know when it's wrong."
+publishedAt: "2026-03-30"
+tags:
+  - "Prompt Engineering"
+  - "Operations"
+  - "Practical AI"
+status: "published"
+author: "Anuj Jain"
+---
+
+Most "prompt engineering" advice is written for researchers chasing benchmark
+points. Operators have a different job: get reliable, reviewable output for a
+real workflow. Here's what actually moves the needle.
+
+## Write the contract, not a wish
+
+Vague prompts get vague results. Treat the prompt like an interface:
+
+- State the **role**, the **input**, and the **exact output shape** you expect.
+- Show one or two **examples** of good output. Examples beat adjectives.
+- Tell it **what to do when it's unsure** — defer, flag, or ask.
+
+## Constrain the output so a human can review it
+
+If the answer comes back as structured fields instead of a paragraph, your team
+can review ten of them in the time it takes to read one essay. Reviewability is
+a feature.
+
+## Build a "wrongness" check
+
+The operator's superpower isn't a clever prompt — it's a cheap way to catch bad
+output before a customer does. Add a verification step: a second pass, a
+citation requirement, or a simple rule that rejects obvious nonsense.
+
+## The takeaway
+
+You don't need to out-clever the model. You need to give it a clear contract
+and a tight feedback loop. That's an operations problem, and operators are
+already good at it.
