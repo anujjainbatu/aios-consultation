@@ -13,9 +13,9 @@ const primaryStats = [
 ];
 
 const secondaryStats = [
-  { value: "48 Hours", label: "avg response time" },
-  { value: "2 Weeks", label: "to first shipped feature" },
-  { value: "100%", label: "client retention" },
+  { value: "24 Hours", label: "Free strategy session, no pitch" },
+  { value: "48 Hours", label: "Average response time" },
+  { value: "2 Weeks", label: "To your first shipped AI feature" },
 ];
 
 export function StatsBar() {
@@ -52,19 +52,25 @@ export function StatsBar() {
         <div className="mt-12 border-t border-border" />
 
         {/* Secondary stats */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-10">
+        <div className="mt-10 grid grid-cols-3 gap-4 lg:gap-10">
           {secondaryStats.map((stat, i) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
-              className="flex flex-col items-center gap-1"
+              className="flex flex-col items-center gap-3 text-center"
             >
-              <span className="text-xl font-semibold text-text-primary">
-                {stat.value}
+              {/* Circle */}
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-accent/40 bg-accent/10 flex items-center justify-center shrink-0">
+                <span className="text-base sm:text-lg font-bold bg-[linear-gradient(90deg,#3B82F6_0%,#93C5FD_100%)] bg-clip-text text-transparent leading-none">
+                  {stat.value}
+                </span>
+              </div>
+              {/* Label below */}
+              <span className="text-xs sm:text-sm text-text-secondary leading-snug max-w-22.5 sm:max-w-none">
+                {stat.label}
               </span>
-              <span className="text-sm text-text-secondary">{stat.label}</span>
             </motion.div>
           ))}
         </div>
