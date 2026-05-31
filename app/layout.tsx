@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/data/site-config";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { BottomNav } from "@/components/layout/BottomNav";
 
 const outfit = Outfit({
   variable: "--font-sans",
@@ -37,8 +38,9 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-background text-text-primary">
         <Navbar />
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="flex-1 pt-20 pb-20 sm:pb-0">{children}</main>
         <Footer />
+        <BottomNav />
       </body>
     </html>
   );

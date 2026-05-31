@@ -16,7 +16,8 @@ export const siteConfig: SiteConfig = {
   linkedinUrl: "https://linkedin.com/in/anujjain",
   githubUrl: "https://github.com/anujjain",
   email: "hi@anujjain.dev",
-  // Placeholder — replace with the real booking link when available.
   calendlyUrl: "https://calendly.com/anujjain/free-strategy-session",
+  // Paste your Apps Script Web App URL here after deploying lead-form.gs
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbzp5BIvRYR_naRXFPBVjdROs2S2L2vN3uOR7ocZhmmXb4_APFhWq7NVQ0dcAjakECo/exec",
   ogImage: "/og-default.svg",
 };

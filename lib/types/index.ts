@@ -25,6 +25,7 @@ export interface SiteConfig {
   githubUrl: string;
   email: string;
   calendlyUrl: string;
+  appsScriptUrl: string;
   ogImage: string;
 }
 
